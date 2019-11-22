@@ -1,0 +1,14 @@
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\bin\Debug\netcoreapp2.1\MyCalculater.Test.deps.json
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\bin\Debug\netcoreapp2.1\MyCalculater.Test.runtimeconfig.json
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\bin\Debug\netcoreapp2.1\MyCalculater.Test.runtimeconfig.dev.json
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\bin\Debug\netcoreapp2.1\MyCalculater.Test.dll
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\bin\Debug\netcoreapp2.1\MyCalculater.Test.pdb
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\obj\Debug\netcoreapp2.1\MyCalculater.Test.csprojAssemblyReference.cache
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\obj\Debug\netcoreapp2.1\MyCalculater.Test.csproj.CoreCompileInputs.cache
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\obj\Debug\netcoreapp2.1\MyCalculater.Test.AssemblyInfoInputs.cache
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\obj\Debug\netcoreapp2.1\MyCalculater.Test.AssemblyInfo.cs
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\obj\Debug\netcoreapp2.1\MyCalculater.Test.dll
+C:\Users\hmspl\source\repos\StandardCalculator\MyCalculater.Test\obj\Debug\netcoreapp2.1\MyCalculater.Test.pdb

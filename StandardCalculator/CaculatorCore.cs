@@ -25,29 +25,40 @@ namespace StandardCalculator
         private string EvaluateDivision(string equation)
         {
             Double answer;
-            string newEquation;
             int i = 0;
             if (equation.Contains('/'))
                 i = equation.IndexOf('/');
             answer = Double.Parse(equation[i - 1].ToString()) / Double.Parse(equation[i + 1].ToString());
-            if (equation.Length < 4)
-                return answer.ToString();
-            newEquation = answer.ToString() + equation.Substring(equation.IndexOf('/') + 1);
-            return newEquation;
+
+            // remove the evaluated equation
+            equation = equation.Remove(i - 1, 3);
+
+            // insert the answer
+            equation = equation.Insert(i-1, answer.ToString());
+
+            /*if (equation.Length < 4)
+                return answer.ToString();*/
+      
+            return equation;
         }
 
         private string EvaluateMultiplication(string equation)
         {
             Double answer;
-            string newEquation;
             int i = 0;
             if (equation.Contains('*'))
                 i = equation.IndexOf('*');
             answer = Double.Parse(equation[i - 1].ToString()) * Double.Parse(equation[i + 1].ToString());
-            if (equation.Length < 4)
-                return answer.ToString();
-            newEquation = answer.ToString() + equation.Substring(equation.IndexOf('*') + 1);
-            return newEquation;
+            // remove the evaluated equation
+            equation = equation.Remove(i - 1, 3);
+
+            // insert the answer
+            equation = equation.Insert(i - 1, answer.ToString());
+
+            /*if (equation.Length < 4)
+                return answer.ToString();*/
+
+            return equation;
         }
 
         private string EvaluateAddition(string equation)
@@ -58,10 +69,16 @@ namespace StandardCalculator
             if (equation.Contains('+'))
                 i = equation.IndexOf('+');
             answer = Double.Parse(equation[i - 1].ToString()) + Double.Parse(equation[i + 1].ToString());
-            if (equation.Length < 4)
-                return answer.ToString();
-            newEquation = answer.ToString() + equation.Substring(equation.IndexOf('+') + 1);
-            return newEquation;
+            // remove the evaluated equation
+            equation = equation.Remove(i - 1, 3);
+
+            // insert the answer
+            equation = equation.Insert(i - 1, answer.ToString());
+
+            /*if (equation.Length < 4)
+                return answer.ToString();*/
+
+            return equation;
         }
 
         private string EvaluationSubtration(string equation)
@@ -72,10 +89,16 @@ namespace StandardCalculator
             if (equation.Contains('-'))
                 i = equation.IndexOf('-');
             answer = Double.Parse(equation[i - 1].ToString()) - Double.Parse(equation[i + 1].ToString());
-            if (equation.Length < 4)
-                return answer.ToString();
-            newEquation = answer.ToString() + equation.Substring(equation.IndexOf('-') + 1);
-            return newEquation;
+            // remove the evaluated equation
+            equation = equation.Remove(i - 1, 3);
+
+            // insert the answer
+            equation = equation.Insert(i - 1, answer.ToString());
+
+            /*if (equation.Length < 4)
+                return answer.ToString();*/
+
+            return equation;
         }
     }
 }

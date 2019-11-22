@@ -51,6 +51,7 @@
             this.btnDel = new System.Windows.Forms.Button();
             this.btnCloseBracket = new System.Windows.Forms.Button();
             this.btnOpenBracket = new System.Windows.Forms.Button();
+            this.btnDivision = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtScreen
@@ -305,12 +306,24 @@
             this.btnOpenBracket.Text = "(";
             this.btnOpenBracket.UseVisualStyleBackColor = true;
             // 
+            // btnDivision
+            // 
+            this.btnDivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDivision.Location = new System.Drawing.Point(214, 177);
+            this.btnDivision.Name = "btnDivision";
+            this.btnDivision.Size = new System.Drawing.Size(45, 44);
+            this.btnDivision.TabIndex = 24;
+            this.btnDivision.Text = "/";
+            this.btnDivision.UseVisualStyleBackColor = true;
+            this.btnDivision.Click += new System.EventHandler(this.btnDivision_Click);
+            // 
             // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClear;
             this.ClientSize = new System.Drawing.Size(271, 450);
+            this.Controls.Add(this.btnDivision);
             this.Controls.Add(this.btnCloseBracket);
             this.Controls.Add(this.btnOpenBracket);
             this.Controls.Add(this.btnEquals);
@@ -367,6 +380,7 @@
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnCloseBracket;
         private System.Windows.Forms.Button btnOpenBracket;
+        private System.Windows.Forms.Button btnDivision;
     }
 }
 

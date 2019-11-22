@@ -103,6 +103,11 @@ namespace StandardCalculator
             txtScreen.Text = "0";
         }
 
+        private void btnDivision_Click(object sender, EventArgs e)
+        {
+            this.OperatorHandler("/");
+        }
+
         private void btnMultiply_Click(object sender, EventArgs e)
         {
             this.OperatorHandler("*");
@@ -122,6 +127,6 @@ namespace StandardCalculator
         {
             string answer = calc.EvaluateEquation(txtScreen.Text);
             txtScreen.Text = answer;
-        }
+        }        
     }
 }
