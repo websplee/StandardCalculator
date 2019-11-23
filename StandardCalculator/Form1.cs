@@ -13,13 +13,25 @@ namespace StandardCalculator
     public partial class frmMainForm : Form
     {
         bool lastChrOperator = false;
-        StandardCalculator.CaculatorCore calc = new CaculatorCore();
+        char[] operators;        
 
         public frmMainForm()
         {
             InitializeComponent();
+            InitializeOperators();
         }
 
+        private void InitializeOperators()
+        {
+            operators = new char[6];
+            // Take NOTE of BODMAS rules in indexes of array
+            //operators[0] = '(';
+            // operators[1] = ')';
+            operators[0] = '/';
+            operators[1] = '*';
+            operators[2] = '+';
+            operators[3] = '-';
+        }
         // General number click handler
         private void GeneralBtnClick(string btnValue)
         {
@@ -42,6 +54,7 @@ namespace StandardCalculator
                 txtScreen.Text += btnValue;
             lastChrOperator = true;
         }
+        
         // Button 7 click
         private void btn7_Click(object sender, EventArgs e)
         {
@@ -125,8 +138,28 @@ namespace StandardCalculator
 
         private void btnEquals_Click(object sender, EventArgs e)
         {
-            string answer = calc.EvaluateEquation(txtScreen.Text);
-            txtScreen.Text = answer;
-        }        
+            string answer = null;
+            IBaseCalculator calculator = new CalculatorCore(this.operators);
+            try
+            {
+                answer = calculator.EvaluateEquation(txtScreen.Text);
+            }
+            catch(ArithmeticException ex)
+            {
+                answer = "0";
+                MessageBox.Show(ex.Message, "Standard Calculator Error");
+                throw ex;
+            }
+            finally
+            {
+                txtScreen.Text = answer;
+            }                        
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            if (txtScreen.Text != "0" && txtScreen.Text != null)
+            txtScreen.Text = txtScreen.Text.Remove(txtScreen.Text.Length - 1);
+        }
     }
 }
